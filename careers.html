@@ -1,0 +1,2659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | MediCare Pro - Join Our Medical Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --accent-dark: #059669;
+            --dark: #111827;
+            --dark-light: #1f2937;
+            --light: #f8fafc;
+            --gray: #6b7280;
+            --gray-light: #e5e7eb;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.15);
+            --radius: 16px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --gradient-dark: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: var(--gradient);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 2rem auto 0;
+            line-height: 1.8;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            padding: 1.1rem 2.4rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-accent:hover {
+            background: var(--accent-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Enhanced Navbar */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .logo i {
+            color: var(--accent);
+            font-size: 2.2rem;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Careers Hero */
+        .careers-hero {
+            min-height: 100vh;
+            padding-top: 120px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, 
+                rgba(37, 99, 235, 0.9) 0%, 
+                rgba(14, 165, 233, 0.8) 50%,
+                rgba(16, 185, 129, 0.7) 100%),
+                url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop') center/cover;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .careers-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .careers-hero h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: white;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .careers-hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        
+        .hero-stat {
+            text-align: center;
+        }
+        
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-stat-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Why Join Us */
+        .why-join-section {
+            padding: 8rem 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-join-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient);
+            transform: scaleY(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .benefit-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 165, 233, 0.1));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover .benefit-icon {
+            background: var(--gradient);
+            color: white;
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        /* Job Categories */
+        .categories-section {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f7ff 100%);
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+        
+        .category-card:hover .category-icon {
+            transform: rotate(360deg);
+        }
+        
+        .job-count {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        /* Current Openings */
+        .openings-section {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .jobs-filter {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .filter-label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .filter-select {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            transition: var(--transition);
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            background-size: 1em;
+        }
+        
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .search-box {
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3.5rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        .jobs-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .job-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .job-info {
+            flex: 1;
+        }
+        
+        .job-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .job-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+        }
+        
+        .job-meta-item i {
+            color: var(--primary);
+        }
+        
+        .job-tags {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .job-tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .job-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        /* Employee Testimonials */
+        .testimonials-section {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(14, 165, 233, 0.05));
+        }
+        
+        .testimonials-slider {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 3.5rem;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: serif;
+        }
+        
+        .testimonial-content {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Career Path */
+        .career-path-section {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .path-steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+        
+        .path-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: var(--gradient);
+            z-index: 1;
+        }
+        
+        .path-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .path-step:hover .step-number {
+            background: var(--gradient);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* Benefits Details */
+        .benefits-details {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);
+        }
+        
+        .benefits-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .benefit-tab {
+            padding: 1rem 2rem;
+            background: white;
+            border: 2px solid var(--gray-light);
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .benefit-tab.active {
+            background: var(--gradient);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+        }
+        
+        .benefit-content {
+            display: none;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .benefit-content.active {
+            display: block;
+        }
+        
+        .benefit-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Application Process */
+        .process-section {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .process-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .process-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+        }
+        
+        .process-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .process-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* CTA Section */
+        .careers-cta {
+            padding: 8rem 0;
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .careers-cta::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            top: -150px;
+            right: -150px;
+        }
+        
+        .careers-cta::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+        }
+        
+        .careers-cta h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .careers-cta p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+        }
+        
+        /* Application Modal */
+        .application-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: var(--radius);
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+            z-index: 1;
+        }
+        
+        .modal-close:hover {
+            color: var(--dark);
+            transform: rotate(90deg);
+        }
+        
+        .modal-body {
+            padding: 3rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .file-upload {
+            border: 2px dashed var(--gray-light);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding-top: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-newsletter {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .careers-hero h1 {
+                font-size: 3.8rem;
+            }
+            
+            .path-steps {
+                flex-wrap: wrap;
+            }
+            
+            .path-steps::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 3rem;
+                gap: 2rem;
+                transition: var(--transition);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .careers-hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .job-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .job-meta {
+                justify-content: center;
+            }
+            
+            .job-tags {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .careers-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .jobs-filter {
+                flex-direction: column;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .careers-cta h2 {
+                font-size: 2.5rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .careers-hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .btn {
+                padding: 1rem 1.8rem;
+            }
+            
+            .benefit-card,
+            .process-card {
+                padding: 2rem;
+            }
+            
+            .modal-body {
+                padding: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <div>MediCare<span>Pro</span></div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="careers.html" class="active">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="#openings" class="btn btn-primary">
+                        <i class="fas fa-search"></i> View Jobs
+                    </a>
+                    <div class="mobile-toggle" id="mobileToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Careers Hero -->
+    <section class="careers-hero">
+        <div class="container">
+            <div class="careers-hero-content">
+                <h1>Build Your Career in Healthcare Excellence</h1>
+                <p>Join our team of medical professionals dedicated to transforming healthcare through innovation, compassion, and cutting-edge technology.</p>
+                <div class="hero-actions">
+                    <a href="#openings" class="btn btn-primary">
+                        <i class="fas fa-search"></i> View Open Positions
+                    </a>
+                    <a href="#apply" class="btn btn-secondary">
+                        <i class="fas fa-user-plus"></i> Upload Resume
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">500+</div>
+                        <div class="hero-stat-label">Medical Professionals</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">40+</div>
+                        <div class="hero-stat-label">Departments</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">25+</div>
+                        <div class="hero-stat-label">Countries Represented</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">98%</div>
+                        <div class="hero-stat-label">Employee Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us -->
+    <section class="why-join-section">
+        <div class="why-join-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Join MediCare Pro?</h2>
+                <p>We offer more than just a job - we offer a rewarding career with growth opportunities and exceptional benefits</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>Access to cutting-edge medical training, conferences, and professional development programs to advance your career.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>Cutting-Edge Technology</h3>
+                    <p>Work with the latest medical equipment and technology in state-of-the-art facilities.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaborative Environment</h3>
+                    <p>Join a team of experts who value collaboration, innovation, and mutual support.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Work-Life Balance</h3>
+                    <p>Flexible scheduling and wellness programs to support your personal and professional life.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Recognition & Growth</h3>
+                    <p>Clear career progression paths and recognition programs for outstanding performance.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Global Opportunities</h3>
+                    <p>International collaborations, exchange programs, and global healthcare initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Career Paths</h2>
+                <p>Find your perfect role in our diverse medical departments</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="medical">
+                    <div class="category-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Medical & Clinical</h3>
+                    <p>Doctors, Surgeons, Specialists, and Clinical Roles</p>
+                    <span class="job-count">24 Openings</span>
+                </div>
+                
+                <div class="category-card" data-category="nursing">
+                    <div class="category-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Nursing</h3>
+                    <p>Registered Nurses, Nurse Practitioners, and Nursing Staff</p>
+                    <span class="job-count">18 Openings</span>
+                </div>
+                
+                <div class="category-card" data-category="allied">
+                    <div class="category-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Allied Health</h3>
+                    <p>Therapists, Technicians, and Diagnostic Professionals</p>
+                    <span class="job-count">15 Openings</span>
+                </div>
+                
+                <div class="category-card" data-category="research">
+                    <div class="category-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Research & Innovation</h3>
+                    <p>Clinical Researchers, Scientists, and Innovators</p>
+                    <span class="job-count">8 Openings</span>
+                </div>
+                
+                <div class="category-card" data-category="admin">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Administrative</h3>
+                    <p>Hospital Management, HR, and Support Staff</p>
+                    <span class="job-count">12 Openings</span>
+                </div>
+                
+                <div class="category-card" data-category="technology">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3>Healthcare Technology</h3>
+                    <p>IT, Digital Health, and Medical Technology Roles</p>
+                    <span class="job-count">9 Openings</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Openings -->
+    <section class="openings-section" id="openings">
+        <div class="container">
+            <div class="section-header">
+                <h2>Current Open Positions</h2>
+                <p>Browse through our latest career opportunities and find your perfect match</p>
+            </div>
+            
+            <div class="jobs-filter">
+                <div class="filter-group">
+                    <label class="filter-label">Search Jobs</label>
+                    <div class="search-box">
+                        <input type="text" class="search-input" id="jobSearch" placeholder="Search by job title or keyword...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Department</label>
+                    <select class="filter-select" id="departmentFilter">
+                        <option value="all">All Departments</option>
+                        <option value="medical">Medical & Clinical</option>
+                        <option value="nursing">Nursing</option>
+                        <option value="allied">Allied Health</option>
+                        <option value="research">Research</option>
+                        <option value="admin">Administrative</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Job Type</label>
+                    <select class="filter-select" id="typeFilter">
+                        <option value="all">All Job Types</option>
+                        <option value="fulltime">Full Time</option>
+                        <option value="parttime">Part Time</option>
+                        <option value="contract">Contract</option>
+                        <option value="internship">Internship</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Experience Level</label>
+                    <select class="filter-select" id="experienceFilter">
+                        <option value="all">All Levels</option>
+                        <option value="entry">Entry Level</option>
+                        <option value="mid">Mid Level</option>
+                        <option value="senior">Senior Level</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Job 1 -->
+                <div class="job-card" data-department="medical" data-type="fulltime" data-experience="senior" data-title="Senior Cardiologist">
+                    <div class="job-info">
+                        <h3 class="job-title">Senior Cardiologist</h3>
+                        <p>Lead our cardiology department and provide expert care for complex cardiac cases.</p>
+                        
+                        <div class="job-meta">
+                            <div class="job-meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Mumbai, India</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Full Time</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>₹25-35 LPA</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Posted 2 days ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-tags">
+                            <span class="job-tag">Cardiology</span>
+                            <span class="job-tag">Senior Level</span>
+                            <span class="job-tag">MBBS Required</span>
+                            <span class="job-tag">10+ Years Exp</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="btn btn-primary apply-job" data-job="Senior Cardiologist">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn btn-secondary view-job" data-job="senior-cardiologist">
+                            <i class="fas fa-eye"></i> Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Job 2 -->
+                <div class="job-card" data-department="nursing" data-type="fulltime" data-experience="mid" data-title="ICU Nurse Manager">
+                    <div class="job-info">
+                        <h3 class="job-title">ICU Nurse Manager</h3>
+                        <p>Lead and manage our ICU nursing team in providing exceptional critical care.</p>
+                        
+                        <div class="job-meta">
+                            <div class="job-meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Delhi, India</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Full Time</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>₹12-18 LPA</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Posted 5 days ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-tags">
+                            <span class="job-tag">Nursing</span>
+                            <span class="job-tag">ICU</span>
+                            <span class="job-tag">Management</span>
+                            <span class="job-tag">B.Sc Nursing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="btn btn-primary apply-job" data-job="ICU Nurse Manager">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn btn-secondary view-job" data-job="icu-nurse-manager">
+                            <i class="fas fa-eye"></i> Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Job 3 -->
+                <div class="job-card" data-department="allied" data-type="fulltime" data-experience="entry" data-title="MRI Technician">
+                    <div class="job-info">
+                        <h3 class="job-title">MRI Technician</h3>
+                        <p>Operate advanced MRI equipment and assist in diagnostic imaging procedures.</p>
+                        
+                        <div class="job-meta">
+                            <div class="job-meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Bangalore, India</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Full Time</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>₹6-9 LPA</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Posted 1 week ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-tags">
+                            <span class="job-tag">Radiology</span>
+                            <span class="job-tag">Technician</span>
+                            <span class="job-tag">Imaging</span>
+                            <span class="job-tag">Entry Level</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="btn btn-primary apply-job" data-job="MRI Technician">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn btn-secondary view-job" data-job="mri-technician">
+                            <i class="fas fa-eye"></i> Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Job 4 -->
+                <div class="job-card" data-department="research" data-type="contract" data-experience="mid" data-title="Clinical Research Coordinator">
+                    <div class="job-info">
+                        <h3 class="job-title">Clinical Research Coordinator</h3>
+                        <p>Coordinate clinical trials and research studies for new medical treatments.</p>
+                        
+                        <div class="job-meta">
+                            <div class="job-meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Hyderabad, India</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Contract</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>₹8-12 LPA</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Posted 3 days ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-tags">
+                            <span class="job-tag">Research</span>
+                            <span class="job-tag">Clinical Trials</span>
+                            <span class="job-tag">Contract</span>
+                            <span class="job-tag">Pharma</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="btn btn-primary apply-job" data-job="Clinical Research Coordinator">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn btn-secondary view-job" data-job="clinical-research-coordinator">
+                            <i class="fas fa-eye"></i> Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Job 5 -->
+                <div class="job-card" data-department="technology" data-type="fulltime" data-experience="mid" data-title="Healthcare Data Analyst">
+                    <div class="job-info">
+                        <h3 class="job-title">Healthcare Data Analyst</h3>
+                        <p>Analyze medical data to improve patient outcomes and operational efficiency.</p>
+                        
+                        <div class="job-meta">
+                            <div class="job-meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Remote / Mumbai</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Full Time</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>₹10-15 LPA</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Posted 1 day ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-tags">
+                            <span class="job-tag">Data Science</span>
+                            <span class="job-tag">Healthcare IT</span>
+                            <span class="job-tag">Analytics</span>
+                            <span class="job-tag">Remote Option</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="btn btn-primary apply-job" data-job="Healthcare Data Analyst">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn btn-secondary view-job" data-job="healthcare-data-analyst">
+                            <i class="fas fa-eye"></i> Details
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Job 6 -->
+                <div class="job-card" data-department="admin" data-type="internship" data-experience="entry" data-title="Hospital Administration Intern">
+                    <div class="job-info">
+                        <h3 class="job-title">Hospital Administration Intern</h3>
+                        <p>Gain hands-on experience in hospital management and healthcare administration.</p>
+                        
+                        <div class="job-meta">
+                            <div class="job-meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Chennai, India</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Internship</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Stipend Provided</span>
+                            </div>
+                            <div class="job-meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Posted 2 weeks ago</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-tags">
+                            <span class="job-tag">Internship</span>
+                            <span class="job-tag">Administration</span>
+                            <span class="job-tag">Entry Level</span>
+                            <span class="job-tag">Students Welcome</span>
+                        </div>
+                    </div>
+                    
+                    <div class="job-actions">
+                        <button class="btn btn-primary apply-job" data-job="Hospital Administration Intern">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn btn-secondary view-job" data-job="hospital-administration-intern">
+                            <i class="fas fa-eye"></i> Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-secondary" id="loadMoreJobs">
+                    <i class="fas fa-redo"></i> Load More Positions
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Employee Stories</h2>
+                <p>Hear from our team members about their experiences working at MediCare Pro</p>
+            </div>
+            
+            <div class="testimonials-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                "Working at MediCare Pro has been a transformative experience. The opportunity to work with cutting-edge technology alongside brilliant minds has accelerated my career growth tremendously."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Rajesh Verma">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Dr. Rajesh Verma</h4>
+                                    <p>Senior Neurologist | 5 Years at MediCare Pro</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                "The collaborative environment and continuous learning opportunities make every day exciting. I've grown both professionally and personally during my time here."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Priya Sharma</h4>
+                                    <p>ICU Nurse Manager | 3 Years at MediCare Pro</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                "What I appreciate most is the work-life balance and the genuine care for employee wellbeing. The leadership truly values each team member's contribution."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Arun Kumar">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Arun Kumar</h4>
+                                    <p>Healthcare Data Analyst | 2 Years at MediCare Pro</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Path -->
+    <section class="career-path-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Career Growth Path</h2>
+                <p>Clear progression opportunities and development programs for every role</p>
+            </div>
+            
+            <div class="path-steps">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <h3>Onboarding & Training</h3>
+                    <p>Comprehensive orientation and skill development programs</p>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <h3>Role Mastery</h3>
+                    <p>Develop expertise with mentorship and hands-on experience</p>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <h3>Specialization</h3>
+                    <p>Advanced training and certification opportunities</p>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <h3>Leadership Development</h3>
+                    <p>Management training and leadership opportunities</p>
+                </div>
+                
+                <div class="path-step">
+                    <div class="step-number">5</div>
+                    <h3>Expert Leadership</h3>
+                    <p>Department leadership and strategic roles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Details -->
+    <section class="benefits-details">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Benefits Package</h2>
+                <p>We care for our team members with a complete benefits package</p>
+            </div>
+            
+            <div class="benefits-tabs">
+                <div class="benefit-tab active" data-benefit="health">Health & Wellness</div>
+                <div class="benefit-tab" data-benefit="financial">Financial Benefits</div>
+                <div class="benefit-tab" data-benefit="development">Professional Development</div>
+                <div class="benefit-tab" data-benefit="worklife">Work-Life Balance</div>
+            </div>
+            
+            <div class="benefit-content active" id="health-benefits">
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-heartbeat" style="color: var(--accent); margin-right: 0.5rem;"></i> Comprehensive Health Insurance</h3>
+                        <p>Full medical, dental, and vision coverage for you and your family</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-dumbbell" style="color: var(--accent); margin-right: 0.5rem;"></i> Wellness Programs</h3>
+                        <p>Gym memberships, yoga classes, and mental health support</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-utensils" style="color: var(--accent); margin-right: 0.5rem;"></i> Nutritional Support</h3>
+                        <p>Healthy meal options and nutritional counseling</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-hand-holding-medical" style="color: var(--accent); margin-right: 0.5rem;"></i> Preventive Care</h3>
+                        <p>Regular health screenings and preventive healthcare services</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="benefit-content" id="financial-benefits">
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-money-bill-wave" style="color: var(--accent); margin-right: 0.5rem;"></i> Competitive Salary</h3>
+                        <p>Industry-leading compensation packages with annual reviews</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-piggy-bank" style="color: var(--accent); margin-right: 0.5rem;"></i> Retirement Plans</h3>
+                        <p>401(k) with company matching and pension options</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-gift" style="color: var(--accent); margin-right: 0.5rem;"></i> Performance Bonuses</h3>
+                        <p>Annual bonuses and performance-based incentives</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-university" style="color: var(--accent); margin-right: 0.5rem;"></i> Education Assistance</h3>
+                        <p>Tuition reimbursement for continued education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple Application Process</h2>
+                <p>Our streamlined hiring process makes it easy to join our team</p>
+            </div>
+            
+            <div class="process-cards">
+                <div class="process-card">
+                    <div class="process-number">1</div>
+                    <h3>Submit Application</h3>
+                    <p>Complete our online application form and upload your resume</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">2</div>
+                    <h3>Screening Call</h3>
+                    <p>Initial phone screening with our recruitment team</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">3</div>
+                    <h3>Interviews</h3>
+                    <p>Technical and cultural fit interviews with department heads</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">4</div>
+                    <h3>Assessment</h3>
+                    <p>Skills assessment and practical evaluation</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">5</div>
+                    <h3>Offer & Onboarding</h3>
+                    <p>Job offer and comprehensive onboarding process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="careers-cta" id="apply">
+        <div class="container">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join our team of healthcare professionals and help us transform patient care</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" id="uploadResumeBtn" style="background: white; color: var(--primary); padding: 1.2rem 3rem; font-size: 1.1rem;">
+                    <i class="fas fa-upload"></i> Upload Your Resume
+                </button>
+                <a href="#openings" class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.1); border: 2px solid white; color: white; padding: 1.2rem 3rem; font-size: 1.1rem;">
+                    <i class="fas fa-search"></i> Browse All Jobs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">MediCare Pro Careers</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8);">Join our mission to revolutionize healthcare through innovation, compassion, and excellence.</p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition);">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition);">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition);">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Home</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="about.html" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">About Us</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="services.html" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Services</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="doctors.html" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Doctors</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="careers.html" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Careers</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="contact.html" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">Career Categories</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.8rem;"><a href="#medical" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Medical & Clinical</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#nursing" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Nursing</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#allied" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Allied Health</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#research" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Research</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#technology" style="color: rgba(255, 255, 255, 0.8); transition: var(--transition);">Healthcare Technology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: white; font-size: 1.5rem; margin-bottom: 1.5rem;">Contact HR</h3>
+                    <div style="color: rgba(255, 255, 255, 0.8);">
+                        <p style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-top: 0.2rem;"></i>
+                            123 Healthcare Street, Medical District, Mumbai, India 400001
+                        </p>
+                        <p style="margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <i class="fas fa-phone-alt" style="color: var(--accent); margin-top: 0.2rem;"></i>
+                            HR Department: +91 22 9876 5432
+                        </p>
+                        <p style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <i class="fas fa-envelope" style="color: var(--accent); margin-top: 0.2rem;"></i>
+                            careers@medicarepro.com<br>hr@medicarepro.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediCare Pro. All Rights Reserved. | <a href="#" style="color: var(--accent);">Privacy Policy</a> | <a href="#" style="color: var(--accent);">Equal Opportunity Employer</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Modal -->
+    <div class="application-modal" id="applicationModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-body">
+                <h2 style="margin-bottom: 0.5rem; color: var(--dark);" id="modalJobTitle">Apply for Position</h2>
+                <p style="color: var(--gray); margin-bottom: 2rem;">Complete the form below to submit your application</p>
+                
+                <form id="applicationForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Current Position</label>
+                        <input type="text" class="form-control" placeholder="Your current job title">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Years of Experience</label>
+                        <select class="form-control">
+                            <option value="">Select Experience</option>
+                            <option value="0-2">0-2 Years</option>
+                            <option value="2-5">2-5 Years</option>
+                            <option value="5-10">5-10 Years</option>
+                            <option value="10+">10+ Years</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Highest Qualification</label>
+                        <input type="text" class="form-control" placeholder="e.g., MBBS, M.Sc Nursing, B.Tech">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Cover Letter</label>
+                        <textarea class="form-control" rows="4" placeholder="Tell us why you're interested in this position..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Upload Resume/CV *</label>
+                        <div class="file-upload" id="resumeUpload">
+                            <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: var(--gray); margin-bottom: 1rem;"></i>
+                            <p>Click or drag file to upload</p>
+                            <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem;">PDF, DOC, DOCX (Max 5MB)</p>
+                            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" style="display: none;">
+                        </div>
+                        <div id="fileName" style="margin-top: 0.5rem; color: var(--primary); font-weight: 500;"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Portfolio/LinkedIn (Optional)</label>
+                        <input type="url" class="form-control" placeholder="https://linkedin.com/in/yourprofile">
+                    </div>
+                    
+                    <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.8rem; margin-top: 1.5rem;">
+                        <input type="checkbox" id="agreeTerms" style="margin-top: 0.3rem;" required>
+                        <label for="agreeTerms" style="font-size: 0.9rem; color: var(--gray);">
+                            I agree to the <a href="#" style="color: var(--primary);">privacy policy</a> and consent to having my data processed for recruitment purposes.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+                        <i class="fas fa-paper-plane"></i> Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Job Details Modal -->
+    <div class="application-modal" id="jobDetailsModal">
+        <div class="modal-content">
+            <span class="modal-close" id="detailsClose">&times;</span>
+            <div class="modal-body" id="jobDetailsContent">
+                <!-- Job details will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile Navigation
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Initialize Swiper
+        const testimonialsSwiper = new Swiper('.testimonials-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+
+        // Job Filtering
+        const jobSearch = document.getElementById('jobSearch');
+        const departmentFilter = document.getElementById('departmentFilter');
+        const typeFilter = document.getElementById('typeFilter');
+        const experienceFilter = document.getElementById('experienceFilter');
+        const jobCards = document.querySelectorAll('.job-card');
+
+        function filterJobs() {
+            const searchTerm = jobSearch.value.toLowerCase();
+            const department = departmentFilter.value;
+            const type = typeFilter.value;
+            const experience = experienceFilter.value;
+
+            jobCards.forEach(card => {
+                const title = card.getAttribute('data-title').toLowerCase();
+                const cardDepartment = card.getAttribute('data-department');
+                const cardType = card.getAttribute('data-type');
+                const cardExperience = card.getAttribute('data-experience');
+
+                let matches = true;
+
+                // Search filter
+                if (searchTerm && !title.includes(searchTerm)) {
+                    matches = false;
+                }
+
+                // Department filter
+                if (department !== 'all' && cardDepartment !== department) {
+                    matches = false;
+                }
+
+                // Type filter
+                if (type !== 'all' && cardType !== type) {
+                    matches = false;
+                }
+
+                // Experience filter
+                if (experience !== 'all' && cardExperience !== experience) {
+                    matches = false;
+                }
+
+                // Show/hide card with animation
+                if (matches) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Add event listeners for filtering
+        jobSearch.addEventListener('input', filterJobs);
+        departmentFilter.addEventListener('change', filterJobs);
+        typeFilter.addEventListener('change', filterJobs);
+        experienceFilter.addEventListener('change', filterJobs);
+
+        // Benefits Tabs
+        const benefitTabs = document.querySelectorAll('.benefit-tab');
+        const benefitContents = document.querySelectorAll('.benefit-content');
+
+        benefitTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const benefitId = tab.getAttribute('data-benefit');
+                
+                // Remove active class from all tabs
+                benefitTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all contents
+                benefitContents.forEach(content => content.classList.remove('active'));
+                // Show selected content
+                document.getElementById(`${benefitId}-benefits`).classList.add('active');
+            });
+        });
+
+        // Application Modal
+        const applicationModal = document.getElementById('applicationModal');
+        const modalClose = document.getElementById('modalClose');
+        const applyButtons = document.querySelectorAll('.apply-job');
+        const modalJobTitle = document.getElementById('modalJobTitle');
+        const applicationForm = document.getElementById('applicationForm');
+        const resumeUpload = document.getElementById('resumeUpload');
+        const resumeFile = document.getElementById('resumeFile');
+        const fileName = document.getElementById('fileName');
+        const uploadResumeBtn = document.getElementById('uploadResumeBtn');
+
+        // Apply button click
+        applyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const jobTitle = button.getAttribute('data-job');
+                modalJobTitle.textContent = `Apply for: ${jobTitle}`;
+                applicationModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Upload resume button
+        uploadResumeBtn.addEventListener('click', () => {
+            modalJobTitle.textContent = 'Submit Your Resume';
+            applicationModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        // File upload
+        resumeUpload.addEventListener('click', () => {
+            resumeFile.click();
+        });
+
+        resumeFile.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                fileName.textContent = `Selected: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+                
+                // Validate file size
+                if (file.size > 5 * 1024 * 1024) { // 5MB limit
+                    fileName.textContent = 'File too large! Maximum size is 5MB.';
+                    fileName.style.color = '#ef4444';
+                    resumeFile.value = '';
+                } else {
+                    fileName.style.color = 'var(--primary)';
+                }
+            }
+        });
+
+        // Drag and drop for file upload
+        resumeUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            resumeUpload.style.borderColor = 'var(--primary)';
+            resumeUpload.style.background = 'rgba(37, 99, 235, 0.05)';
+        });
+
+        resumeUpload.addEventListener('dragleave', () => {
+            resumeUpload.style.borderColor = 'var(--gray-light)';
+            resumeUpload.style.background = '';
+        });
+
+        resumeUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            resumeUpload.style.borderColor = 'var(--gray-light)';
+            resumeUpload.style.background = '';
+            
+            if (e.dataTransfer.files.length > 0) {
+                const file = e.dataTransfer.files[0];
+                
+                // Validate file type
+                const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                if (!validTypes.includes(file.type)) {
+                    fileName.textContent = 'Invalid file type! Please upload PDF or Word documents.';
+                    fileName.style.color = '#ef4444';
+                    return;
+                }
+                
+                // Validate file size
+                if (file.size > 5 * 1024 * 1024) {
+                    fileName.textContent = 'File too large! Maximum size is 5MB.';
+                    fileName.style.color = '#ef4444';
+                    return;
+                }
+                
+                fileName.textContent = `Selected: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)`;
+                fileName.style.color = 'var(--primary)';
+                
+                // Create a new FileList to simulate file input
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                resumeFile.files = dataTransfer.files;
+            }
+        });
+
+        // Form submission
+        applicationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Validate required fields
+            const requiredFields = applicationForm.querySelectorAll('[required]');
+            let valid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.style.borderColor = '#ef4444';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            // Validate resume file
+            if (!resumeFile.files.length) {
+                valid = false;
+                resumeUpload.style.borderColor = '#ef4444';
+                fileName.textContent = 'Please upload your resume';
+                fileName.style.color = '#ef4444';
+            }
+            
+            if (!valid) {
+                showNotification('Please fill all required fields and upload your resume.', 'error');
+                return;
+            }
+            
+            // Show success message
+            const submitBtn = applicationForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Application Submitted!';
+            submitBtn.style.background = 'var(--accent)';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                applicationModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                applicationForm.reset();
+                fileName.textContent = '';
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+                
+                showNotification('Application submitted successfully! Our HR team will contact you soon.');
+            }, 2000);
+        });
+
+        // Close modal
+        modalClose.addEventListener('click', () => {
+            applicationModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === applicationModal) {
+                applicationModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Job Details Modal
+        const jobDetailsModal = document.getElementById('jobDetailsModal');
+        const detailsClose = document.getElementById('detailsClose');
+        const viewButtons = document.querySelectorAll('.view-job');
+        const jobDetailsContent = document.getElementById('jobDetailsContent');
+
+        // Job data
+        const jobsData = {
+            'senior-cardiologist': {
+                title: 'Senior Cardiologist',
+                department: 'Medical & Clinical',
+                type: 'Full Time',
+                location: 'Mumbai, India',
+                salary: '₹25-35 LPA',
+                experience: '10+ years',
+                description: 'We are seeking an experienced Senior Cardiologist to lead our cardiology department and provide expert care for complex cardiac cases.',
+                responsibilities: [
+                    'Lead and mentor junior cardiologists and medical staff',
+                    'Diagnose and treat complex cardiac conditions',
+                    'Perform interventional cardiology procedures',
+                    'Develop and implement treatment protocols',
+                    'Participate in clinical research and trials',
+                    'Provide consultations for referred cases'
+                ],
+                requirements: [
+                    'MBBS with MD/DM in Cardiology',
+                    '10+ years of clinical experience in cardiology',
+                    'Valid medical license to practice in India',
+                    'Experience in interventional cardiology',
+                    'Strong leadership and mentoring skills',
+                    'Excellent communication and patient care abilities'
+                ],
+                benefits: [
+                    'Competitive salary with performance bonuses',
+                    'Comprehensive health insurance for family',
+                    'Professional development allowance',
+                    'Research grant opportunities',
+                    'Paid international conferences',
+                    'Relocation assistance if required'
+                ]
+            },
+            'icu-nurse-manager': {
+                title: 'ICU Nurse Manager',
+                department: 'Nursing',
+                type: 'Full Time',
+                location: 'Delhi, India',
+                salary: '₹12-18 LPA',
+                experience: '5+ years',
+                description: 'Lead and manage our ICU nursing team in providing exceptional critical care to patients.',
+                responsibilities: [
+                    'Manage ICU nursing staff and schedules',
+                    'Ensure quality patient care standards',
+                    'Implement ICU protocols and procedures',
+                    'Train and mentor nursing staff',
+                    'Coordinate with medical teams',
+                    'Monitor ICU equipment and supplies'
+                ],
+                requirements: [
+                    'B.Sc Nursing with valid registration',
+                    '5+ years ICU nursing experience',
+                    '2+ years in supervisory role',
+                    'ACLS/BLS certification',
+                    'Strong leadership skills',
+                    'Excellent critical thinking abilities'
+                ],
+                benefits: [
+                    'Competitive salary package',
+                    'Health insurance coverage',
+                    'Professional certification support',
+                    'Continuing education allowance',
+                    'Shift differential pay',
+                    'Annual performance bonus'
+                ]
+            }
+        };
+
+        viewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const jobId = button.getAttribute('data-job');
+                const job = jobsData[jobId];
+
+                if (job) {
+                    jobDetailsContent.innerHTML = `
+                        <h2 style="margin-bottom: 0.5rem; color: var(--dark);">${job.title}</h2>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                            <span style="background: var(--light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem;">
+                                <i class="fas fa-building" style="color: var(--primary); margin-right: 0.5rem;"></i> ${job.department}
+                            </span>
+                            <span style="background: var(--light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem;">
+                                <i class="fas fa-clock" style="color: var(--primary); margin-right: 0.5rem;"></i> ${job.type}
+                            </span>
+                            <span style="background: var(--light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 0.5rem;"></i> ${job.location}
+                            </span>
+                            <span style="background: var(--light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem;">
+                                <i class="fas fa-money-bill-wave" style="color: var(--primary); margin-right: 0.5rem;"></i> ${job.salary}
+                            </span>
+                            <span style="background: var(--light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem;">
+                                <i class="fas fa-briefcase" style="color: var(--primary); margin-right: 0.5rem;"></i> ${job.experience} experience
+                            </span>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1rem; color: var(--dark);">Job Description</h3>
+                            <p>${job.description}</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1rem; color: var(--dark);">Key Responsibilities</h3>
+                            <ul style="list-style: none;">
+                                ${job.responsibilities.map(resp => `
+                                    <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 0.8rem;">
+                                        <i class="fas fa-check" style="color: var(--accent); margin-top: 0.2rem;"></i> ${resp}
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1rem; color: var(--dark);">Requirements</h3>
+                            <ul style="list-style: none;">
+                                ${job.requirements.map(req => `
+                                    <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 0.8rem;">
+                                        <i class="fas fa-graduation-cap" style="color: var(--primary); margin-top: 0.2rem;"></i> ${req}
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1rem; color: var(--dark);">Benefits</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                ${job.benefits.map(benefit => `
+                                    <div style="background: var(--light); padding: 1rem; border-radius: 8px; text-align: center;">
+                                        <i class="fas fa-gift" style="color: var(--accent); margin-bottom: 0.5rem; display: block;"></i>
+                                        ${benefit}
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary apply-job" data-job="${job.title}" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Apply for This Position
+                        </button>
+                    `;
+
+                    // Add event listener to apply button in details modal
+                    jobDetailsContent.querySelector('.apply-job').addEventListener('click', () => {
+                        jobDetailsModal.style.display = 'none';
+                        const jobTitle = job.title;
+                        modalJobTitle.textContent = `Apply for: ${jobTitle}`;
+                        applicationModal.style.display = 'flex';
+                    });
+
+                    jobDetailsModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        detailsClose.addEventListener('click', () => {
+            jobDetailsModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === jobDetailsModal) {
+                jobDetailsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Load More Jobs
+        document.getElementById('loadMoreJobs').addEventListener('click', () => {
+            // In a real application, this would load more jobs from an API
+            showNotification('Loading more positions...', 'info');
+            
+            // Simulate loading
+            setTimeout(() => {
+                showNotification('No more positions available at the moment. Please check back later.');
+            }, 1500);
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.benefit-card, .category-card, .job-card, .process-card, .path-step').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.05)';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Notification function
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            const bgColor = type === 'error' ? '#ef4444' : type === 'info' ? '#3b82f6' : '#10b981';
+            
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 2rem;
+                background: ${bgColor};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                box-shadow: var(--shadow-lg);
+                z-index: 10000;
+                animation: slideIn 0.3s ease, slideOut 0.3s ease 2.7s;
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+            `;
+            
+            const icon = type === 'error' ? 'fa-exclamation-circle' : type === 'info' ? 'fa-info-circle' : 'fa-check-circle';
+            
+            notification.innerHTML = `
+                <i class="fas ${icon}"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Add CSS for notifications
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger initial animations
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>
